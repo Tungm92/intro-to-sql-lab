@@ -36,7 +36,8 @@ SELECT * FROM cities WHERE countrycode = 'SMR';
 -- Find out the city, and do another search for what country it's in. Hurry!
 
 -- Write SQL query here
-SELECT countrycode FROM cities WHERE name LIKE 'San Mar%';
+SELECT name FROM cities WHERE name LIKE 'Serra%';
+SELECT countrycode FROM cities WHERE name = 'Serra';
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi 
 -- at the airport, and is headed towards the capital! Look up the country's 
@@ -47,7 +48,7 @@ SELECT countrycode FROM cities WHERE name LIKE 'San Mar%';
 SELECT cities.name AS city 
 FROM cities JOIN countries 
 ON cities.id = countries.capital 
-WHERE countrycode = 'MEX' OR code = 'MEX';
+WHERE countrycode = 'BRA' OR code = 'BRA';
 
 -- Clue #7: She knows we're on to her – her taxi dropped her off 
 -- at the international airport, and she beat us to the boarding gates. 
